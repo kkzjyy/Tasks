@@ -117,3 +117,25 @@ $ git push origin master
 ```
 
 来进行本地仓库和远程仓库的上传同步。
+
+**Question:**
+
+在同步中，遇到了如下问题。
+
+![image-20231114081113763](C:\Users\oojks\AppData\Roaming\Typora\typora-user-images\image-20231114081113763.png)
+
+在删除.ssh密钥并重新设置后，仍然无法解决该问题。查看仓库地址也是正确的，但无法上传同步。为此，我决定尝试一下，htpps的地址来进行远程仓库的创建。但遇到了如下问题：
+
+![image-20231114081946596](C:\Users\oojks\AppData\Roaming\Typora\typora-user-images\image-20231114081946596.png)
+
+在网上寻找后，可以用
+
+```
+git config --global http.sslVerify false
+```
+
+来解决服务器的信任问题。最后成功上传：
+
+![image-20231114082147458](C:\Users\oojks\AppData\Roaming\Typora\typora-user-images\image-20231114082147458.png)
+
+PS：仍未知道为啥ssh无法上传同步。
