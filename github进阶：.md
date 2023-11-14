@@ -120,13 +120,22 @@ $ git push origin master
 
 **Question:**
 
-在同步中，遇到了如下问题。
+在同步中，遇到了如下问题：
 
-![image-20231114081113763](C:\Users\oojks\AppData\Roaming\Typora\typora-user-images\image-20231114081113763.png)
+```
+ssh: connect to host github.com port 22: Connection refused
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+```
 
 在删除.ssh密钥并重新设置后，仍然无法解决该问题。查看仓库地址也是正确的，但无法上传同步。为此，我决定尝试一下，htpps的地址来进行远程仓库的创建。但遇到了如下问题：
 
-![image-20231114081946596](C:\Users\oojks\AppData\Roaming\Typora\typora-user-images\image-20231114081946596.png)
+```
+ git SSL certificate problem: unable to get local issuer certificate
+```
 
 在网上寻找后，可以用
 
